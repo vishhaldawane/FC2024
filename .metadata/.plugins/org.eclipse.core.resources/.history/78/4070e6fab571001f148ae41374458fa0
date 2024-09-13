@@ -21,7 +21,7 @@ public class PersonTest {
 		person3.walking(250);
 		person2.bookReading();
 		person4.walking(350);
-		person3.workout(45);
+		person2.workout(45);
 		person5.walking(650);
 
 	}
@@ -42,65 +42,13 @@ public class PersonTest {
  * 			|
  * 			|									METHOD area of the Person Object
  * 			100				
- * 			person1								Person() { }
+ * 			person								Person() { }
  * 												think(){}
  * 												walking(int){}
  * 												float workout(int)	{}
  * 												int bookReading(){}		
- * 	person1.think()		
- *  person2.think()
+ * 			
  * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|M			|Prakash	|23		|
- * 												---------------------------------
- * 			+---------------------------------->200
- * 			|
- * 			|									
- * 			200				
- * 			person2
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|F			|Mayuri		|19		|
- * 												---------------------------------
- * 			+---------------------------------->300
- * 			|
- * 			|									
- * 			300				
- * 			person3
- * 
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|M		|Avinash		|22		|
- * 												---------------------------------
- * 			+---------------------------------->400
- * 			|
- * 			|									
- * 			400				
- * 			person4
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|F		|Sonali			|21	|
- * 												---------------------------------
- * 			+---------------------------------->500
- * 			|
- * 			|									
- * 			500				
- * 			person5
- * 
- * 
- * 								
  */
 class Person
 {

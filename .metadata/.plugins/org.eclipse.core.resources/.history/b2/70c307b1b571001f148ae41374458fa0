@@ -16,14 +16,6 @@ public class PersonTest {
 		
 		int pagesRead = person1.bookReading();
 		System.out.println("\tPerson read "+pagesRead+" PAGES...");
-		
-		person2.walking(150);
-		person3.walking(250);
-		person2.bookReading();
-		person4.walking(350);
-		person3.workout(45);
-		person5.walking(650);
-
 	}
 }
 /*
@@ -36,71 +28,19 @@ public class PersonTest {
  * 												|			|			|
  * 												gender		name		age
  * 												--------------------------------
- * 												|F		|Asawari		|20		|
+ * 												|		|			|			|
  * 												---------------------------------
  * 			+---------------------------------->100
  * 			|
  * 			|									METHOD area of the Person Object
  * 			100				
- * 			person1								Person() { }
+ * 			person								Person() { }
  * 												think(){}
  * 												walking(int){}
  * 												float workout(int)	{}
  * 												int bookReading(){}		
- * 	person1.think()		
- *  person2.think()
+ * 			
  * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|M			|Prakash	|23		|
- * 												---------------------------------
- * 			+---------------------------------->200
- * 			|
- * 			|									
- * 			200				
- * 			person2
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|F			|Mayuri		|19		|
- * 												---------------------------------
- * 			+---------------------------------->300
- * 			|
- * 			|									
- * 			300				
- * 			person3
- * 
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|M		|Avinash		|22		|
- * 												---------------------------------
- * 			+---------------------------------->400
- * 			|
- * 			|									
- * 			400				
- * 			person4
- * 
- * 												FIELDS of the Person Object
- * 												|			|			|
- * 												gender		name		age
- * 												--------------------------------
- * 												|F		|Sonali			|21	|
- * 												---------------------------------
- * 			+---------------------------------->500
- * 			|
- * 			|									
- * 			500				
- * 			person5
- * 
- * 
- * 								
  */
 class Person
 {
@@ -123,7 +63,7 @@ class Person
 	
 	//returnType				without arugment
 	void 				think(    ) {
-		System.out.println(name+" is thinking....");
+		System.out.println("1.Person is thinking....");
 	}
 	
 	//use your imagination to make a similar function of category 1
@@ -134,7 +74,7 @@ class Person
 	//2. function WITH argument | BUT WITHOUT return type
 	void walking(int steps)
 	{
-		System.out.println(name+" is walking "+steps+" STEPS...");
+		System.out.println("2.Person is walking "+steps+" STEPS...");
 	}
 	//use your imagination to make a similar function of category 2
 	//MAKE IT HERE
@@ -143,7 +83,7 @@ class Person
 	//3. function WITH arguments | AND WITH return type [ int here ]
 	float workout(int minutes)
 	{
-		System.out.println(name+" is doing workout for "+minutes+" MINUTES");
+		System.out.println("3.Person doing workout for "+minutes+" MINUTES");
 		return minutes*3.5f; // x calories burnt out
 	}
 	
@@ -153,7 +93,7 @@ class Person
 	
 	//4. function WITHOUT argument | BUT WITH return type
 	int bookReading() {
-		System.out.println(name+" read the book .....");
+		System.out.println("4.Person read the book .....");
 		return 30; //number of pages read | or time took in mnts to read
 	}
 	
