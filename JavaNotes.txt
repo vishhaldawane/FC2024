@@ -525,6 +525,78 @@ ATM ENGINEER has written the below code to make the above 2 lines work
 
 	4. Inheritance
 
+			Acquiring properties from EXISTING classes
+
+			- re use of the code
+
+			i) Single level
+					A		Person
+					|		|
+					B		Student
+
+
+			ii) multi level
+					A		Person
+					|		|
+					B		Student
+					|		|
+					C		Employee
+
+			iii) multiple level
+					A	B	Mammal	Bird		
+					|	|	|		|
+					------	-----------
+					   |			|
+					   C			Bat <-- Flying Mammal
+
+							Mammal	Fish
+							|		|
+							-----------
+								|
+								Whale <-- Mammal Fish
+
+
+			iv) hierarchical level
+					A		
+					|
+					----------
+					|		|
+					C		D
+
+			v) hybrid level
+
+					A
+					|
+					-------------
+					|		|
+					B		D
+					|		|
+					---------------------
+					|		|		|
+					C		E		F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	5. Object communication
 
 
