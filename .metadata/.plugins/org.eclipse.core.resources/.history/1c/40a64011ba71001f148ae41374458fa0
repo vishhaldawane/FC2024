@@ -10,11 +10,6 @@ public class PersonTest {
 		Person person5 	= 	new 		Person('F',"Sonali",21);
 		
 		person1.think();
-		person1.think(15);
-		person1.think("Exam");
-		person1.think(30, "Final Exam");
-		person1.think("Prelims", 90);
-		
 		person1.walking(500);
 		float caloriesBurnt = person1.workout(90);
 		System.out.println("\tCalories burnt : "+caloriesBurnt);
@@ -35,7 +30,7 @@ public class PersonTest {
  * 
  * 							Person person 	= 	new 		Person();
 
- * 					STACK									HEAP/Free Store
+ * 					STACK									HEAP
  * 
  * 												FIELDS of the Person Object
  * 												|			|			|
@@ -127,30 +122,8 @@ class Person
 	//1. function WITHOUT argument | WITHOUT return type
 	
 	//returnType				without arugment
-	//OL1
 	void 				think(    ) {
 		System.out.println(name+" is thinking....");
-	}
-	
-	//OL2
-	void think(int minutes) {
-		System.out.println(name+" is thinking....for "+minutes+" MINUTES");
-
-	}
-	//OL3
-	void think(String herHisName) {
-		System.out.println(name+" is thinking....of "+herHisName);
-
-	}
-	//OL4
-	void think(int minutes , String herHisName) {
-		System.out.println(name+" is thinking....of "+herHisName+ " for "+minutes+ " MINUTES");
-
-	}
-	//OL5
-	void think(String herHisName, int minutes ) {
-		System.out.println(name+" is thinking....of "+herHisName+ " for "+minutes+ " MINUTES");
-
 	}
 	
 	//use your imagination to make a similar function of category 1
