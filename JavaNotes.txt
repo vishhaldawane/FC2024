@@ -713,6 +713,77 @@ ATM ENGINEER has written the below code to make the above 2 lines work
 
 
 
+Assignment for WeekEnd
+----------------------
+
+1. innovate a new parent class with 3 data members + 2 functions + ctors
+   and innovate an appropriate child class [ sub class] with 2 data members
+	+ 2 functions + ctor
+
+	A <-- 3 fields + 2 functions + ctors
+	|
+	B <-- 2 fields + 2 functions + ctors
+
+
+
+	class Camera
+	{
+		String brand;
+		int numberOfLenses;
+		int memorySize;
+
+		void click()
+		{
+		}
+		void zoomIn() { }
+		void zoomOut() { }
+	}
+
+	class VideoCamera extends Camera
+	{
+		int recordTimeLimit;	
+		float streamRate; //Frames per second 
+
+		void shoot()
+		{
+
+		}
+		void stabilizer() 
+		{
+
+		}
+	}
+
+	class Photographer
+	{
+	}
+
+	class Cinematographer extends Photographer
+	{
+	}
+
+
+	class Pen
+	{
+	}
+
+	class SketchPen
+	{
+	}
+
+
+	class Person
+	{
+	}
+	class Magician
+	{
+	}
+
+
+
+
+
+
 
 
 
