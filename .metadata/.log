@@ -679,3 +679,69 @@ Java Model Exception: Java Model Status [think(int, String)#2 [in Person [in [Wo
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-09-13 15:50:04.651
 !MESSAGE think(int, String)#2 [in Person [in [Working copy] PersonTest.java [in <default> [in src [in OOPSProject]]]]] does not exist
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:07.742
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.aSyTgxFg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:07.746
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.aSyTgxFg
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:07.747
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:07.749
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.aSyTgxFg => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:22.322
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:22.333
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@555b0d52[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=552)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:22.334
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.397
+!MESSAGE Boot LS startup time from start to initialized: 8062ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.893
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nRMatlvFisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.898
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.899
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.900
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.901
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.902
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nRMatlvF => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.903
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.904
+!MESSAGE buffering callback sts4.classpath.nRMatlvF OOPSProject false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:30.905
+!MESSAGE executing callback sts4.classpath.nRMatlvF 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-09-13 15:54:32.223
+!MESSAGE executing callback sts4.classpath.nRMatlvF SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-09-13 16:00:18.789
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
