@@ -475,6 +475,12 @@ ATM ENGINEER has written the below code to make the above 2 lines work
 
 
 				b. function overloading
+					- defining multilple copies of the same function
+					- differentiated by 
+						i) the type of argument
+						ii) number of arguments
+						iii) sequence/order of type  of arguments
+
 				c. function overriding
 				d. operator overloading
 
