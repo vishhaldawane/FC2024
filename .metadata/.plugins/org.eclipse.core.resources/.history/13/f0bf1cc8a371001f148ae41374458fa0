@@ -1,0 +1,43 @@
+
+public class PersonTest {
+	public static void main(String[] args) {
+		
+		Person person = new Person();
+		person.think();
+		
+	}
+}
+
+class Person
+{
+	//1. function without argument | without return type
+	
+	//returnType				without arugment
+	void 				think(    ) {
+		System.out.println("Person is thinking....");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

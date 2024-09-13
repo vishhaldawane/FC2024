@@ -1,0 +1,69 @@
+
+public class PersonTest {
+	public static void main(String[] args) {
+		
+		Person person = new Person();
+		person.think();
+		person.walking(500);
+		float caloriesBurnt = person.workout(90);
+		System.out.println("Calories burnt : "+caloriesBurnt);
+		
+		int pagesRead = person.bookReading();
+		System.out.println("Person read "+pagesRead+" PAGES...");
+	}
+}
+
+class Person
+{
+	//1. function WITHOUT argument | WITHOUT return type
+	
+	//returnType				without arugment
+	void 				think(    ) {
+		System.out.println("1.Person is thinking....");
+	}
+	
+	//2. function WITH argument | BUT WITHOUT return type
+	void walking(int steps)
+	{
+		System.out.println("2.Person is walking "+steps+" STEPS...");
+	}
+	
+	//3. function WITH arguments | AND WITH return type [ int here ]
+	float workout(int minutes)
+	{
+		System.out.println("3.Person doing workout for "+minutes+" MINUTES");
+		return minutes*3.5f; // x calories burnt out
+	}
+	
+	//4. function WITHOUT argument | BUT WITH return type
+	int bookReading() {
+		System.out.println("4.Person read the book .....");
+		return 30; //number of pages read | or time took in mnts to read
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

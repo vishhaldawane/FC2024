@@ -1,0 +1,35 @@
+
+public class DoctorTest {
+	public static void main(String[] args) {
+		
+		Doctor doctor  = new Doctor();
+		System.out.println("---------");
+		
+		Surgeon surgeon = new Surgeon();
+		System.out.println("---------");
+		
+		HeartSurgeon heartSurgeon = new HeartSurgeon();
+		
+	}
+}
+
+class Doctor
+{		
+	// it is explicit - no - arg ctor, visible to human eyes
+	Doctor() { // it is never called as DEFAULT ctor
+		System.out.println("Doctor ctor....");
+	}
+}
+
+class Surgeon extends Doctor 
+{
+	Surgeon() {
+		System.out.println("\tSurgeon ctor...");
+	}
+}
+class HeartSurgeon extends Doctor 
+{
+	HeartSurgeon() {
+		System.out.println("\t\tHeartSurgeon ctor...");
+	}
+}

@@ -1,0 +1,681 @@
+
+
+
+
+
+		Java Programming Language
+
+						- With Vishhal Dawane
+
+
+
+Agenda Day 1
+---------------
+
+Introduction to Java
+The Big Picture
+Classes and Objects
+OOPS concepts
+	Association Principle <-- THEME OF JAVA
+		* isA hasA usesA producesA
+
+packages
+
+
+		spoken langauge =  how we learn?
+
+				listen = ear [ 2 ] -> information brain
+				|
+				speak = mouth [ 1 ]
+				|
+				read = eyes [ 2 ] - alphabets, A B ..words
+				|			sentences, paras, essay..stories etc
+				|
+				writing = hand [ kinesthetic ] body is involved
+
+
+			java is not spoken language
+			
+		then what to listen?  CONCEPTS
+
+		then what to speak? QUESTIONS, DISCUSS
+
+		then what to read? notes, programs
+
+		then what to write? chart,logic,programs
+
+
+			VAKOG
+			|||||
+			||||gustatory [ taste ]
+			|||olfactory [ smell ]
+			||kinesthetic [ touch ]
+			|auditory [ ears]
+		visual [ eyes ]
+
+	
+
+		Anything in this world is created in two stages
+
+1	write a program to show HELLO WOLRD
+..
+100
+		construction						same construction at
+		with frequency						same frequency
+		|									|
+		1st stage								2nd stage
+		|									|
+	invisible									visible
+		|									|
+	thoughts	emotions						actions	results
+	|BRAIN		|HEART/BODY				|		|
+	why		energy in motion			keyboard		program's output
+	|		POSITIVE/NEGATIVE
+	thoughts
+	are
+	invisible
+	|
+	because they
+	are faster
+	than light
+	|
+	light is linear
+	|
+	thoughts are non-linear
+	|
+	65000 thoughts per day
+	|
+	1 mnt = 60 seconds
+	1 hour = 60 X 60 = 3600
+	1 day = 3600 x 24 = 86400
+	|
+	90% useless and negative
+
+
+
+
+								keyboard		screen
+								|			|
+								type			seen
+								|CODE		|CODE
+								hand
+
+		Class							Object
+		|								|
+	class is a design of an object		object is an instance of a class
+		|								|
+	blue print of a house				the actual house(s)
+		|								|
+	to make a blue print u need			now u refer the paper blue print
+	a paper, pencil, drawing skills,		and create the actual house from
+		|							land, building materials, bricks,
+	a design is ready					cement, steel rods, labour, 
+	[ civil engineering design ]			civil architects, electrician,
+									plumber, etc the team
+		|							|
+		logical						physical
+		|							|
+
+
+			is "Sachin Tendulkar" an object or a class?
+		it is neither the class nor the object
+		-it is the attribute of the object
+
+	lets say to store details of a book
+
+	we have a choice to store various types of details
+	integer type, character type, string type, flaot type etc.
+
+
+
+
+						who
+						|? developer! tester! associate
+						|? learner? male,female,student
+						|?employee
+						| I am Unlimited Potential
+				-------------------------
+				|					|
+				where				when
+				|FC,Pune				|2024,2025,2026,2027,2028...
+		------------------------------------------------
+		|				|					|
+		why				what					how
+		|				|					|
+	   code chef			inFORMation		implementation
+											| coding
+									-------------------
+									|			|
+									success <---- feedback
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------
+I.
+	int main()
+	{
+		int bookid=101;
+		float price=1200;
+		string authorName="James G";
+		int numberOfPages=800;
+		float price3=1500;
+		int bookid2=102;
+		string bookName2="Oracle";
+		string authorName3="Richard S";
+		float price2=1300;
+		string authorName2="Scott M";
+		int publicationYear2=2004;
+		int publicationYear=1999;
+		int numberOfPages2=900;
+		string bookName="JPL";
+		int bookid3=102;
+		string bookName3="Unix";
+		int publicationYear3=2005;
+		int numberOfPages3=1300;
+
+		price3=1350;
+	
+	}
+
+
+II.
+
+		struct Book
+		{
+			private:
+
+			int bookid;
+			string bookName;
+			string authorName;
+			float price;
+			int publicationYear;
+			int numberOfPages;
+			
+			public:
+				void setBook(.......) { }
+				void printBook(){}
+		};
+		struct Song
+		{
+			private:
+			
+			string title;
+			string artist;
+			string album;
+			int year;
+
+			public:
+				void setSong(....) { }
+				void printSong(){ }
+		}
+
+contract of a structure = association of data and function together
+
+
+	int main()
+	{
+		struct Book book3;
+		struct Book book1={101,"JPL","JG",1300,2009,2000};
+		struct Book book2;
+
+		struct Song song1={"Zhingat","AjayAtul","Sairat",2016};
+		struct Song song2;
+		struct Song song3;
+
+		book1.author = song1.artist;
+		song1.title = book1.bookName;
+
+	}
+
+III.
+
+
+		class Book
+		{
+			private int bookid;
+			private string bookName;
+			private string authorName;
+			private float price;
+			private int publicationYear;
+			private int numberOfPages;
+			
+		
+			public void setBook(.......) { }
+			public void printBook(){}
+		};
+
+		class Song
+		{
+			string title;
+			string artist;
+			string album;
+			int year;
+
+			public:
+				void setSong(....) { }
+				void printSong(){ }
+		}
+									book1
+				bookid	bookName	price	authorName	pubYear  nop
+				---------------------------------------------------------
+				|		|		|	|			|		|	|
+				---------------------------------------------------------
+				100
+
+									book3
+				bookid	bookName	price	authorName	pubYear  nop
+				---------------------------------------------------------
+				|		|		|	|			|		|	|
+				---------------------------------------------------------
+				200
+
+
+									book3
+				bookid	bookName	price	authorName	pubYear  nop
+				---------------------------------------------------------
+				|		|		|	|			|		|	|
+				---------------------------------------------------------
+				300
+
+
+I am a tailor to create Shirt
+
+CustomerA
+	|
+	1. find out the requirement of CustomerA
+			full size shirt / half sleeves?
+
+	2. as per that the measurement of the CLOTH requirement
+	3. take the measurement of the customer body | BODY
+	4. write down the measurements on the BLAK paper + PEN + TAPE
+	5. customer goes home with a delivery promise date
+	-----------
+	6. make the cutting diagram as per the MEASUREMENTs from PAPER
+	7. you need the CHALK to draw the diagram on the cloth
+	---------
+	8. according to the diagram you need the SCISSOR to cut into pieces
+	---------
+	9. Use the SEWING machine [ NEEDLE + THREAD ] to STITCH the relevant
+		pieces together to make a SHIRT - BUTTON also STITCHED
+	-----------
+	10. IRON/PRESS and PACK it - BURN out 
+-------------------
+	11. delivered, tried the shirt, and with a complain - its too tight
+
+
+
+	class Measurement
+	{
+		paper,pen
+			measure() { }
+	}
+
+	class Cutting
+	{
+		Scissor
+			cut() { }
+	}
+
+	class Stitching
+	{
+		Needle
+		Thread
+
+		void stitch() { }
+	}
+
+
+	class Cricketer					Cricketer cricketer; //Valid C++
+	{						//but in java it is just a reference
+		int rank;					cricketer = new Cricketer();
+		String crickerName;
+		int age;				cricketer.criketerName="Sachin Tendulkar"
+		float strikeRate;
+		int numberOfCenturies;
+		int numberOfFiftees;
+		int numberOfSixers;
+		int numberOfBoundries;
+		int totalScore;
+
+			void hitSixer() {
+				numberOfSixers++;
+				totalScore = totalScore + 6;
+			}
+			void hitFourRuns() {
+				numberOfBoundries++;
+				totalScore = totalScore + 4;
+			}
+			void makeOneRun() {
+				totalScore++;
+			}
+	}
+
+
+
+------------------------------------------------------------
+
+
+
+	OOPS Concepts
+	---------------
+
+	1. Abstraction
+		-it is the "WHAT IS?" part of an object
+		-hide the complexity of an object
+		-provide the USAGE of an object via public/accessible functions
+
+			i.data abstraction
+				- number of customers hit the ATM
+			ii.procedural abstraction
+				- camera recording
+				- log generation
+				
+			iii. class abstraction
+				- internal UNIT, hidden from us
+
+FARMER is ALLOWED TO RUN BELOW TWO LINES
+-------------------------
+			ATM theAtm = new ATM(); // approach the ATM Queue
+			theAtm.withdraw(5000); // by touch screen press
+
+ATM ENGINEER has written the below code to make the above 2 lines work
+
+			class ATM
+			{
+				//i. data abstraction
+				private int numberOfCustomersHit;
+				private double totalCashAtATM;
+				private Dispenser theDispenser = new Dispenser();
+
+					//ii. procedural abstraction
+					private void cameraRecording()
+					{
+					}
+	
+					public void withdraw(double amt)
+					{
+						totalCashAtATM -= amt;
+						theDispenser.dispenseCash(amt); //cash at the tray
+					}
+					//iii. class abstraction
+					private class Dispenser {
+						void dispenseCash(double amt) {
+							//..code to dispense cash at physical level
+						}
+						private void countCash() {
+							//..mechanical code to count the cash
+						}
+					}
+		
+			
+
+			}
+
+			Q. what is your father?
+			A. He is in police?
+
+			Q. What is an ATM?
+			A. dispense cash, thats it.
+
+			Q. What is a String class? <-- User of the String class
+			A. to hold the the collection of characters in double quotes
+
+	2. Encapsulation
+		it is the "HOW IS IT?" part of an object
+			Q. What type of work he do there?
+			A. ...he goes on time
+				...salute the boss
+				...introspection 
+				... FIR filing
+				... patrolling.....etc
+				... much more
+				...but never comes on time
+
+			Q. How the ATM is functioning....
+			A.		discuss all
+					the dirty details of it
+
+			Q. How the String class holds it?
+			A. class String { <-- the developer of the String class
+
+					upperCAse() { }
+					lowerCase() { }
+					concat() { }
+					subString() { }
+					...
+					...
+
+			   }
+
+	3. Polymorphism
+			ability  of a business entity to have/appear in many forms
+
+				a. class extension
+						Doctor
+						|diagnose() { ENT check }
+				----------------------
+				|
+				Surgeon
+				| diagnose() {   ENT Check + CT scan }
+				|
+			HeartSurgeon
+				| diagnose() { ENT check + CT scan + ECG scan }
+
+
+
+				b. function overloading
+				c. function overriding
+				d. operator overloading
+
+
+					Person
+					| name, age, gender
+					| void giveVote() { }
+				------------------
+				|
+				Student <-- 6 fields
+				| rollno, marks, grade
+				| void giveExam() { }
+				|
+			Employee <-- 9 fields here
+				| empno, desg, salary
+				| void doProjectWork() { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	4. Inheritance
+
+	5. Object communication
+
+
+
+
+
+
+	kuchhbhi.cpp
+	-----------
+	#include ...
+	int main() {
+		..
+		A a;
+		a.foo();
+		return 0;
+	}
+	class A {
+		void foo(){ }
+	}	
+	class B {}
+	class C {}
+	|
+	no compulsion to
+	write any class
+
+
+	First.cpp
+	|
+1	compile<-- MS-Visual Studio
+	|
+	First.obj
+	|
+2	Linker
+	|
+	First.exe <-- we run this file as a final product
+
+
+	First.java
+	-------------
+	<-- A compulsion to write every thing inside a class -->
+	<-- one can NEVER write any open function --->
+	int main() { // INVALID PLACE OR LOCATION
+	}
+	----------------------
+
+	<-- one .java file can have many classes in it --->
+	<-- if public class is specified then it must be saved in its own file -->
+
+	First.java
+	-------------
+	public class First // a public class MUST be saved in its OWN FILE
+	{
+	}
+	--------------------
+
+
+	First.java
+	-----------
+	public class Second { } // ERROR
+
+
+	First.java
+	------------
+	class Second { } <--- VALID
+
+
+	First.java
+	--------------
+	class Second{ } // valid
+	public class First {} // valid
+	-----------------
+
+	First.java -- or rename this file as Fourth
+	-------------
+	class Third{ }// valid
+	class Second { } // valid
+	public class Fourth{} // INVALID - either replace this class name with First
+	--------------------------------------
+
+
+
+
+
+
+	imagive i have a Book 
+	and i want to store the details of this book
+
+	int main()
+	{
+
+	}
+
+	
+							Data types
+								|
+				------------------------------------------
+				|							|
+				primitive					secondary / non-primitive
+				|								|
+	----------------------------------				  Object<--super most parent 
+	|		|		|		|					|
+	Integral floating character boolean		-------------------
+	|		|		|		|			|		|	   |
+	byte  1 float 4   char 2		boolean 1		String	Doctor System  etc...
+	short 2 double 8
+	int   4
+	long  8
+
+	there is nothing called as unsinged/signed
+
+
+
+	unsinged int i;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
