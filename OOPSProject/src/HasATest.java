@@ -57,6 +57,49 @@ class Cycle extends Vehicle {
 class Wheel {
 	
 }
+
+class Brain
+{
+	
+}
+class Heart
+{
+	
+}
+
+class Lung {
+	
+}
+class Liver
+{
+	
+}
+
+class Kidney {
+	
+}
+
+class Human 
+{
+	
+	Brain leftLogicalBrain = new Brain();
+	Brain rightLogicalBrain = new Brain();
+	Brain leftEmotionalBrain = new Brain();
+	Brain rightEmotionalBrain = new Brain();
+	
+	Heart heart = new Heart();
+	
+	Liver liver = new Liver();
+	
+	Lung rightLung = new Lung();
+	Lung  leftLung = new Lung();
+	
+	Kidney rightKidney = new Kidney();
+	Kidney leftKidney = new Kidney();
+	
+	
+}
+
 //The WHOLE entity
 class Car extends Vehicle //isA - aggregation
 {
@@ -77,6 +120,7 @@ class Car extends Vehicle //isA - aggregation
 	}
 	
 	void startTheCar() {
+		engine.startTheEngine();
 		System.out.println(model+ " Car is started....");
 	}
 	
@@ -85,6 +129,7 @@ class Car extends Vehicle //isA - aggregation
 	}
 	
 	void stopTheCar() {
+		engine.stopTheEngine();
 		System.out.println(model+" Car is stopped....");
 	}
 }
