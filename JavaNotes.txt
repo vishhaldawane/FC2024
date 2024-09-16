@@ -609,8 +609,89 @@ ATM ENGINEER has written the below code to make the above 2 lines work
 					Association
 						|
 			-------------------------------------------
-			|		|
-			isA		hasA
+			|		|		|		|
+			isA		hasA		usesA	producesA
+
+
+	class A
+	{
+	}
+	class B extends A //isA - aggregation
+	{
+		C c = new C(); //hasA - composition
+
+		void fun(D d , E e, F f) <-- usesA
+		{
+
+		}
+
+	producesA
+		|
+		G foo(H h, I i, J j) <-- usesA
+		{
+		}
+	}
+
+	class Test
+	{
+		main()
+		{
+			Car car = new Car();
+			Fuel f = new Fuel();
+			Traffic t = new Traffic();
+			Road r = new Road();
+
+			Pollution po = car.drive(f,t,r);
+			po.show();
+		}
+	}
+	class Vehicle
+	{
+	}
+	
+	class Car extends Vehicle //isA - aggregation
+	{
+		Engine e = new Engine(); //hasA - composition
+
+		void fun(D d , E e, F f) <-- usesA
+		{
+
+		}
+
+	producesA
+		|
+		Pollution drive(Fuel f, Traffic t, Road r) <-- usesA
+		{
+			
+			Pollition poll = new Pollution();
+			return poll; // the value of poll is returned
+			//as per the pollution promised in the return type;
+
+		}
+	}
+	class Fuel { }
+	class Pollution
+	{
+		float carbonMonoxideLevel;
+		float dustParticle;
+		
+	}
+
+	class Kitchen
+	{
+
+		Tea makeTea(Water w, Milk m, TeaPowder tp, Sugar s)
+		{
+			..
+			..
+			..
+			Tea tea = new Tea();
+			return tea;
+		}	
+	}
+
+//jdbc/file/threading/packages/exception handling
+
 
 
 		Person
