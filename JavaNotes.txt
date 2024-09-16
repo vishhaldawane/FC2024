@@ -599,6 +599,54 @@ ATM ENGINEER has written the below code to make the above 2 lines work
 
 	5. Object communication
 
+			Passing Object as an argument
+			Returning object as a return value 
+
+
+
+
+
+					Association
+						|
+			-------------------------------------------
+			|		|
+			isA		hasA
+
+
+		Person
+		|
+		|isA
+		|
+		Student
+		|
+		|isA
+		|
+		Employee
+
+
+		Vehicle
+		|isA
+		Car
+		|isA
+		SedanCar
+
+
+
+		Doctor
+		|
+		|isA
+		|
+		Surgeon
+		|
+		|isA
+		|
+		HeartSurgeon
+
+
+
+
+
+
 
 
 

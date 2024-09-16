@@ -28,7 +28,33 @@ public class PersonTest {
 		person4.walking(350);
 		person3.workout(45);
 		person5.walking(650);
+		
+		System.out.println("-----------");
+		
+		Student student = new Student('M',"Jack",22,1234,"Bharati Vidyapeeth",'A');
+		student.attendClass();
+		student.study();
+		student.think();
+		student.bookReading();
+		student.think("The Bus");
+		student.walking(100);
+		student.workout(35);
 
+		System.out.println("-----------");
+
+		
+		Employee employee = new Employee('F',"Julie",23,2234,"Vidyalankar College",'A',8899,"Four Colours Pvt. Ltd.",45000);
+		employee.work();
+		employee.attendMeetings();
+		employee.attendClass();
+		employee.study();
+		employee.think();
+		employee.bookReading();
+		employee.think("The Bus");
+		employee.walking(100);
+		employee.workout(35);
+		
+		
 	}
 }
 /*
@@ -104,8 +130,43 @@ public class PersonTest {
  * 			500				
  * 			person5
  * 
+ * 		
  * 
- * 								
+ * 
+ * 		Student student = new Student('M',"Jack",22,1234,"Bharati Vidyapeeth",'A');
+
+												|<------------Fields of the Student Object --------------------->
+												FIELDS of the Person Object
+ * 												|			|			|
+ * 												gender		name		age		rollNumber  collegeName	grade
+ * 												----------------------------------------------------------------------
+ * 												|M		|Jack			|22	|		1234	|Bharati Vidya.|	A	|
+ * 												----------------------------------------------------------------------
+ * 			+---------------------------------->600
+ * 			|
+ * 			|									
+ * 			600											Methods from Student
+ * 			student
+ * 															study() { }  attendClasses() { }
+ * 
+ * 
+ * 		Employee employee = new Employee('F',"Julie",23,2234,"Vidyalankar College",'A',8899,"Four Colours Pvt. Ltd.",45000);
+
+												
+												|<--------------------------------Fields of the Employee -------------------------------------------------->
+												|<------------Fields of the Student Object --------------------->
+												FIELDS of the Person Object										|
+ * 												|			|			|
+ * 												gender		name		age		rollNumber  collegeName	grade			empno   companyname         salary
+ * 												-----------------------------------------------------------------------------------------------------------
+ * 												|F		|Julie			|23	|		2234	|Vidyalankar|	A	|	8844	  | FourColours Pvt.Ltd	|45000 |
+ * 												-------------------------------------------------------------------------------------------------------------
+ * 			+---------------------------------->700
+ * 			|
+ * 			|									
+ * 			700											Methods from Employee
+ * 			employee								
+														work() { } attendMeetings() {}
  */
 class Person
 {
@@ -191,8 +252,51 @@ class Person
 
 
 
+class Student extends Person
+{
+	private int rollNumber;
+	private String collegeName;
+	private char grade;
+	
+	public Student(char g, String n, int a, int rollNumber, String collegeName, char grade) {
+		super(g, n, a);
+		this.rollNumber = rollNumber;
+		this.collegeName = collegeName;
+		this.grade = grade;
+	}
+	
+	void study() {
+		System.out.println("Student is studying.....");
+	}
+	
+	void attendClass() {
+		System.out.println("Student is attending classes....");
+	}
+}
 
 
+class Employee extends Student
+{
+	private int empNumber;
+	private String companyName;
+	private float salary;
+	
+	public Employee(char g, String n, int a, int rollNumber, String collegeName, char grade, int empNumber,
+			String companyName, float salary) {
+		super(g, n, a, rollNumber, collegeName, grade);
+		this.empNumber = empNumber;
+		this.companyName = companyName;
+		this.salary = salary;
+	}
+
+	void work() {
+		System.out.println("Employee is studying.....");
+	}
+	
+	void attendMeetings() {
+		System.out.println("Employee is attending meetings....");
+	}
+}
 
 
 
