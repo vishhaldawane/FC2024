@@ -214,6 +214,83 @@ class CurdCulture
 
 
 
+		Packages are similar to directories
+			|
+			java.lang
+			java.net
+
+		A directory is used to store files
+			|
+			c:\vishal\java\lang		or java\net
+
+		since it is a package [ directory ] we can store
+		relevant classes in a particular package
+
+
+					java <-- main-package [ always small case ]
+					|
+			----------------------------------------------------
+			|			|			|			|
+			lang			net			sql			io <-- sub-packages
+			|			|			|			|
+			System		Socket		Driver		InputStream
+			Thread		InetAddress	ResultSet		OutputStream
+			String		ServerSocket	DriverManager	File
+			Exception
+
+
+			we wont keep all the classes in one folder [ package ]
+
+			we will separate them in relevant folders
+
+
+							jungle <-- main package
+							|
+				-------------------------------
+				|		|		|		|
+				river	cave		tree		compound <-- sub-package
+				|		|		|		|
+				Frog		Tiger	Parrot	FarmHouse <-- classes
+				Fish		Lion		Monkey
+
+
+
+		There are FOUR access specifiers
+
+			1.          <-- default/accessible/friendly
+
+			2. private	<-- accessible within the same class design
+
+			3. protected <-- accessible within the same class/ child class
+							in same package/ non-child class in same package
+
+							But not accessible to non-child in diff package
+
+			4. public <-- available across the internet
+
+						from anywhere accessible
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

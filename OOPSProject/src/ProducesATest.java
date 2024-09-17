@@ -185,6 +185,10 @@ class Butter
 	
 	
 }
+class Almond
+{
+	
+}
 
 class Milk {
 	private String type; // cow,buffalow, goat
@@ -198,6 +202,11 @@ class Milk {
 		this.color = color;
 		this.density = density;
 		this.quantity = quantity;
+	}
+	
+	
+	BadamMilk createHealthyDrink(Almond almond[]) {
+		
 	}
 	
 	// producesA //usesA
