@@ -9,13 +9,13 @@ public class WildLifeTest {
 	public static void main(String[] args) {
 		Frog theFrog = new Frog();
 		theFrog.jump();
-		Fish fish = new Fish();
-		fish.swim();
-		Tortoise tort = new Tortoise();
-		tort.swim();
-		tort.walking();
 		
-		Monkey mon = new Monkey();
+		System.out.println("default   : "+theFrog.defaultA);
+		System.out.println("private   : "+theFrog.privateB);
+		System.out.println("protected : "+theFrog.protectedC);
+		System.out.println("public    : "+theFrog.publicD);
+		
+		
 		
 	}
 
