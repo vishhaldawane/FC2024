@@ -1,0 +1,229 @@
+
+
+
+
+	Technology		Machine			Mind
+	|				|				|
+	tantra			yantra			mantra
+		
+				tra = stretching
+
+class Test
+{
+		main()
+		{
+			User user = new User("Shweta","ganesha123");
+			
+			Instagram instagram = new Instagram();
+			FaceBook facebook = new FaceBook();
+
+			user.letsPostVideo(instagram,facebook);
+
+		}
+}
+
+class Person
+{
+
+}
+class User extends Person
+{
+	InstagramCredentials instaCredentials; //hasA
+	FaceBookCredentials  fbCredit; //hasA
+
+	User(String un, String up) {
+		instaCredentials = new InstagramCredentials(un,up);
+		instaCredentials.authenticate(); //verify username,password;
+	}
+						//usesA		usesA
+		void letsPostVideo(Instagram insta, FaceBook fb)
+		{	
+			insta.postVideo() { }
+			fb.post();
+		}
+}
+
+class Credentials
+{
+	String username;
+	String password;
+
+}
+class InstagramCredentials extends Credentials
+{
+
+}
+class FaceBookCredentials extends Credentials
+{
+}
+
+class Application
+{
+}
+
+class Instagram extends Application //isA
+{
+	void postVideo()
+	{
+	}
+}
+class Facebook extends Application //isA
+{
+	void post()
+	{
+	}
+}
+class Twitter extends Application //isA
+{
+	void twit()
+	{
+	}
+}
+
+
+
+
+		class Animal
+		{
+
+		}
+		class Dog
+		{
+			String breed;
+			Tail tail;
+			NeckBelt belt = new NeckBelt();
+
+			void eat(Bowl b)
+			{
+
+			}
+			Safety bark()
+			{
+			}
+		}
+		class Bowl
+		{
+			int size; //inches
+			int capacity; //ltr
+			String content;
+				ctor
+				set/get
+		}
+		class Test
+		{
+				void main()
+				{
+					Dog dog = new Dog();
+					Bowl bowl = new Bowl(5,0.5f,"BoneBuscuits");
+					dog.eat(bowl);
+				}
+		}
+
+
+
+
+
+
+
+4 - Atharva D
+5  - Jay  Bansod
+9 - Mayuri Kasture
+15 - Rutvik
+16 - Shweta
+
+17 - Sonali
+11 - Prajakta Karve
+14 - Rashi
+18 - Vaishnavi Kad
+19 - Vedant Dhopate
+20 - Yogesh
+
+
+class Compressor
+{
+}
+class Freedge
+{
+	String brand;
+	Compressor cmp;
+
+	Freedge(String brand,int speed)
+	{
+		this.brand = brand;
+		cmp = new Compressor(speed);
+	}
+	void store(Food x)
+	{
+		sysout("storing : "+x);
+	}
+}
+
+class Test
+{
+	main() {
+		Freedge f1 = new Freedge("LG",120);
+		Freedge f2 = new Freedge("Samsung"140);
+		Freedge f3 = new Freedge("Hitachi",160);
+	
+		Food food1 = new Food("Fish);
+		Food food2= new Food("Paneer");
+		Food food3 = new Food("Vegetables");
+
+		f1.store(food1);
+
+	}
+}
+
+
+
+
+
+
+
+
+
+class Milk
+{
+	String type; //cow,buffalow, goat
+	String color; //offwhite, white
+	String density; //thin, thick
+	int quantity; // 3 ltr, 5 ltr etc
+
+	cot/set/get
+
+//producesA		 //usesA
+	Curd coagulate(CurdCulture cc)
+	{
+		sysout("creating curd from the milk...using cc");
+		Curd curd = new Curd(); //local object
+		return 100;
+	}
+
+}
+class CurdCulture
+{
+	int quantity;
+	int bacteria; // good one to make the curd
+	ctor/set/get
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
