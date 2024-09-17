@@ -25,11 +25,19 @@ public class WashingMachineTest {
 		WashingMachine samsungMachine = new WashingMachine();
 		
 		
-		samsungMachine.wash(detergent, water, elect, clothes);
+		Laundry laundry = samsungMachine.wash(detergent, water, elect, clothes);
 		
 	}
 }
-
+class Laundry
+{
+	//water cost
+	//detergent cost
+	//electricity cost
+	//number of cloths involved to wash
+	
+	//innovate data and function/ctr/set/get to produce a laundry bill....
+}
 
 class Tub
 {
