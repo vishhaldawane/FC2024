@@ -272,8 +272,21 @@ class CurdCulture
 					
 
 
+				field			method				class
+	-------------------------------------------------------------------------
+	final		CONSTANT			cannot be			cannot be extended
+								overriden			[ cannot become father]
 
+	-------------------------------------------------------------------------
+	static		sharable 
+				field across
+				all the objects
+				of a class
 
+	-------------------------------------------------------------------------
+	abstract
+
+	-------------------------------------------------------------------------
 
 
 

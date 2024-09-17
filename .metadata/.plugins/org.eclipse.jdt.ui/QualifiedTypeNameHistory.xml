@@ -4,4 +4,8 @@
     <fullyQualifiedTypeName name="Water"/>
     <fullyQualifiedTypeName name="Electricity"/>
     <fullyQualifiedTypeName name="Cloth"/>
+    <fullyQualifiedTypeName name="jungle.river.Frog"/>
+    <fullyQualifiedTypeName name="jungle.river.Fish"/>
+    <fullyQualifiedTypeName name="jungle.river.Tortoise"/>
+    <fullyQualifiedTypeName name="jungle.tree.Monkey"/>
 </qualifiedTypeNameHistroy>
