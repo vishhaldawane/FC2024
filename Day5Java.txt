@@ -384,6 +384,58 @@ class B extends A
 
 
 
+	1. With a paper and Pen draw number 6 in anticlock wise
+	2. With the TOE of your right LEG draw circle on the floor clockwise
+	3. DO above 2 steps concurrently
+
+
+	abstract class GeometricalShape
+	{
+		abstract void draw(); // abstract method MUST reside in an ABSTRACT class
+		abstract void calcArea();
+	}
+	class Square extends GeometricalShape {}
+	class Circle extends GeometricalShape {}
+	class Triangle extends GeometricalShape {}
+	class Ellipse extends Circle {} // not compulsory to implement the methods
+
+
+
+
+
+	//it is very much possible to create an abstract class WITHOUT any abstract
+	//method in it
+	abstract class BankAccount
+	{
+		//as of now there are NO abstract methods
+	}
+
+
+
+In Java = One class cannot extend from multiple parent to avoid ambiguity
+
+Interfaces = accessibility context of a class
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
