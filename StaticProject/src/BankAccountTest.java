@@ -65,7 +65,7 @@ public class BankAccountTest {
 
 //com.fc.banks
 
-class BankAccount
+abstract class BankAccount
 {
 	private int accountNumber;
 	private String accountHolder;
@@ -108,6 +108,10 @@ class BankAccount
 		//this.accountHolder = "NONAME2";
 
 
+	}
+	
+	public BankAccount() {
+		
 	}
 	public BankAccount(double bal) {
 		System.out.println("BankAccount(double) ctor...");
@@ -160,3 +164,37 @@ class BankAccount
 	
 	
 }
+class SavingsAccount extends BankAccount
+{
+	
+}
+class CurrentAccount extends BankAccount
+{
+	
+}
+class CreditCardAccount extends BankAccount
+{
+	
+}
+
+
+
+/*
+ * 
+ * 						BankAccount
+ * 							|
+ * 			--------------------------------------
+ * 			|				|					|
+ * 		SavingsAccount	CurrentAccount		CreditCardAccount
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+

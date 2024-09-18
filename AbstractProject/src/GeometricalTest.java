@@ -13,6 +13,14 @@ public class GeometricalTest {
 		Square square = new Square(45);
 		square.draw();
 		square.calcArea();
+		
+		System.out.println("----------");
+		
+		
+		Triangle triangle = new Triangle(45,90);
+		triangle.draw();
+		triangle.calcArea();
+		
 	}
 }
 
@@ -32,6 +40,10 @@ public class GeometricalTest {
 			  
 */
 
+abstract class BankAccount
+{
+	
+}
 abstract class GeometricalShape
 {
 	abstract void draw(); //abstract | incomplete | partial contract
@@ -57,6 +69,7 @@ class Circle extends GeometricalShape
 	}
 }
 
+//Rectangle, Square, Triangle, Circle, Ellipse ...
 class Square extends GeometricalShape
 {
 	float side;
@@ -72,6 +85,27 @@ class Square extends GeometricalShape
 		System.out.println("Square : calcArea() : Calculating the area of the Square....");
 		float area = side * side;
 		System.out.println("Square : area       : "+area);
+	}
+}
+
+class Triangle extends GeometricalShape
+{
+	float base;
+	float height;
+	
+	Triangle(float b, float h) {
+		base = b;
+		height = h;
+		
+	}
+	
+	void draw() { //mandatory development of this method
+		System.out.println("Triangle : draw() is mandatorily implemented");
+	}
+	void calcArea() {
+		System.out.println("Triangle : calcArea() : Calculating the area of the Triangle....");
+		float area = 0.5f * base * height;
+		System.out.println("Triangle : area       : "+area);
 	}
 }
 /*
