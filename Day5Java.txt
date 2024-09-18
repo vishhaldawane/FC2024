@@ -278,15 +278,44 @@ class CurdCulture
 								overriden			[ cannot become father]
 
 	-------------------------------------------------------------------------
-	static		sharable 
-				field across
-				all the objects
-				of a class
-
+	static		sharable 			static method
+				field across		is used to refer
+				all the objects	other static
+				of a class		members/data/
+								functions
 	-------------------------------------------------------------------------
 	abstract
 
 	-------------------------------------------------------------------------
+
+
+
+
+	static	 = static only can access other static
+
+	non-static = non-static can access non-static + static
+
+
+		static								non-static
+		[ Class's Data ]					 [ Object's Data ]
+		|									|
+		rateOfInterest							acno,name,bal
+											acno,name,bal
+											acno,name,bal
+
+		BankAccount.rateOfInterest				this.acno
+											this.name
+											this.bal
+
+
+
+
+
+
+
+
+
+
 
 
 Four categories of methods as per inheritance rule

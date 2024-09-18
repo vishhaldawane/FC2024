@@ -79,7 +79,7 @@ final class Chess // Prakash Dure has developed the "math logic" in below functi
 }
 
 //to develop the chess in graphics 
-class GraphicalChess extends Chess //isA <-- Prajakta Karve
+class GraphicalChess //extends Chess //isA <-- Prajakta Karve
 {
 	void moveMyKnight() { //Horse - 2 - exclusive [ not inherited ]
 		System.out.println("Locating the position on the graphics screen...");
