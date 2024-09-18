@@ -4,7 +4,7 @@ public class WashingMachineTest {
 		
 		//below 4 objects are passed as an argument 
 		//they are not the hasA member of any WashingMachine
-		Detergent detergent = new Detergent("Arial", "TopLoad", "Powder", 2, 20);
+		/*Detergent detergent = new Detergent("Arial", "TopLoad", "Powder", 2, 20);
 		Water water = new Water("SoftWater", 30, "Normal Temperature");
 		Electricity elect = new Electricity("Reliance", 220.0f, 15, 2);		
 		
@@ -20,12 +20,22 @@ public class WashingMachineTest {
 		clothes[2]= cloth3;
 		clothes[3]= cloth4;
 		clothes[4]= cloth5;
-		
+		*/
 		//following machine hasA WashingTub inside it - mandatory part of it
-		WashingMachine samsungMachine = new WashingMachine();
 		
+		/*WashingMachine samsungMachine = new WashingMachine();
+		samsungMachine.dry();
+		samsungMachine.rinse();
+		samsungMachine.wash();
+		 */
 		
-		Laundry laundry = samsungMachine.wash(detergent, water, elect, clothes);
+		Rinsing d = new WashingMachine();
+		//d.dry();
+		//d.wash();
+		d.rinse();
+		
+		//samsungMachine.wash(detergent, water, elect, clothes);
+	
 		
 	}
 }
@@ -278,9 +288,23 @@ class Electricity
 }
 
 
+interface Washing {
+	void wash() ;
+}
+interface Spinning {
+	void spin();
+}
+interface Drying {
+	void dry();
+}
+interface Rinsing {
+	void rinse();
+}
 
-class WashingMachine extends Machine //isA
+class WashingMachine extends Machine implements Washing, Spinning, Drying, Rinsing//isA
 {
+	
+	
 	//hasA
 	private WashingTub theTub = new WashingTub();
 	
@@ -296,6 +320,41 @@ class WashingMachine extends Machine //isA
 		System.out.println("> Using electricity from : "+z.getVendor()+ " of voltage : "+z.getVoltage());
 		theTub.spin();
 	}
+
+
+
+				@Override
+				public void rinse() {
+					// TODO Auto-generated method stub
+					System.out.println("rinsing the clothes...");
+
+				}
+
+
+
+				@Override
+				public void dry() {
+					// TODO Auto-generated method stub
+					System.out.println("Drying the clothes...");
+				}
+
+
+
+				@Override
+				public void spin() {
+					// TODO Auto-generated method stub
+					System.out.println("spinning the clothes...");
+
+				}
+
+
+
+				@Override
+				public void wash() {
+					// TODO Auto-generated method stub
+					System.out.println("washing the clothes...");
+
+				}
 }
 
 

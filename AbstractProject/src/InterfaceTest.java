@@ -166,6 +166,26 @@ class Human extends Mammal implements Thinking, Feeling, Yawning
 	}
 	
 }
+interface X { }
+interface Y { }
+interface Z { }
+
+interface A extends X,Y,Z
+{
+	void fun();
+}
+
+interface B extends A
+{
+	void foo();
+}
+
+class C implements B
+{
+	
+}
+
+
 
 interface Analyzing
 {
