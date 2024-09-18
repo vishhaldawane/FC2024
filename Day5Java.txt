@@ -284,8 +284,9 @@ class CurdCulture
 				of a class		members/data/
 								functions
 	-------------------------------------------------------------------------
-	abstract
-
+	abstract		NA				partial contract/	a class with/without
+								incomplete method	abstract methods
+								of a class
 	-------------------------------------------------------------------------
 
 
@@ -310,7 +311,7 @@ class CurdCulture
 
 
 
-
+		abstract 
 
 
 
