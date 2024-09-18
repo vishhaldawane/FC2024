@@ -1,23 +1,31 @@
 
 public class KiteTest {
 	
-	public static void namedStaticBlock() {
-		System.out.println("namedStaticBlock-> SOME THING COMMMON FOR ALL");
+	
+	static {
+		System.out.println("2[ KiteTest's static block ]");
 	}
+	
+	static {
+		System.out.println("3[ KiteTest's static block ]");
+	}
+	
+	static {
+		System.out.println("1[ KiteTest's static block ]");
+	}
+	
 	
 	public static void main(String[] args) {
 		
-		namedStaticBlock();
-		namedStaticBlock();
 		
 		System.out.println("BEGIN MAIN ");
 
-		namedStaticBlock();
+	
 
 		Kite.showKiteCount();
 
 		
-		namedStaticBlock();
+
 
 		
 		Kite k1 = new Kite("Prakash");
@@ -54,10 +62,7 @@ class Kite
 		System.out.println("TOTAL KITES IN THE SKY : "+kiteCount);
 	}
 	
-	static {//annonymous static block for the ENTIRE Kite class : runs only ONCE
-		System.out.println("\n static block invoked ");
-		System.out.println("SOME DB CONNECTION, some threads, some network initialization.....\n");;
-	}
+	
 	
 	
 	{ //annonymous non-static block called with EACH ctor call per object
@@ -83,6 +88,10 @@ class Kite
 		this.owner=owner;
 	}
 	
+	static {//annonymous static block for the ENTIRE Kite class : runs only ONCE
+		System.out.println("\n[ static block invoked ");
+		System.out.println("SOME DB CONNECTION, some threads, some network initialization.....]\n");;
+	}
 	
 	
 	public Kite(int length, String color, String owner) {
