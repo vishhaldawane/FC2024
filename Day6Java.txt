@@ -1,0 +1,547 @@
+
+
+
+
+	Technology		Machine			Mind
+	|				|				|
+	tantra			yantra			mantra
+		
+				tra = stretching
+
+class Test
+{
+		main()
+		{
+			User user = new User("Shweta","ganesha123");
+			
+			Instagram instagram = new Instagram();
+			FaceBook facebook = new FaceBook();
+
+			user.letsPostVideo(instagram,facebook);
+
+		}
+}
+
+class Person
+{
+
+}
+class User extends Person
+{
+	InstagramCredentials instaCredentials; //hasA
+	FaceBookCredentials  fbCredit; //hasA
+
+	User(String un, String up) {
+		instaCredentials = new InstagramCredentials(un,up);
+		instaCredentials.authenticate(); //verify username,password;
+	}
+						//usesA		usesA
+		void letsPostVideo(Instagram insta, FaceBook fb)
+		{	
+			insta.postVideo() { }
+			fb.post();
+		}
+}
+
+class Credentials
+{
+	String username;
+	String password;
+
+}
+class InstagramCredentials extends Credentials
+{
+
+}
+class FaceBookCredentials extends Credentials
+{
+}
+
+class Application
+{
+}
+
+class Instagram extends Application //isA
+{
+	void postVideo()
+	{
+	}
+}
+class Facebook extends Application //isA
+{
+	void post()
+	{
+	}
+}
+class Twitter extends Application //isA
+{
+	void twit()
+	{
+	}
+}
+
+
+
+
+		class Animal
+		{
+
+		}
+		class Dog
+		{
+			String breed;
+			Tail tail;
+			NeckBelt belt = new NeckBelt();
+
+			void eat(Bowl b)
+			{
+
+			}
+			Safety bark()
+			{
+			}
+		}
+		class Bowl
+		{
+			int size; //inches
+			int capacity; //ltr
+			String content;
+				ctor
+				set/get
+		}
+		class Test
+		{
+				void main()
+				{
+					Dog dog = new Dog();
+					Bowl bowl = new Bowl(5,0.5f,"BoneBuscuits");
+					dog.eat(bowl);
+				}
+		}
+
+
+
+
+
+
+
+4 - Atharva D
+5  - Jay  Bansod
+9 - Mayuri Kasture
+15 - Rutvik
+16 - Shweta
+
+17 - Sonali
+11 - Prajakta Karve
+14 - Rashi
+18 - Vaishnavi Kad
+19 - Vedant Dhopate
+20 - Yogesh
+
+
+class Compressor
+{
+}
+class Freedge
+{
+	String brand;
+	Compressor cmp;
+
+	Freedge(String brand,int speed)
+	{
+		this.brand = brand;
+		cmp = new Compressor(speed);
+	}
+	void store(Food x)
+	{
+		sysout("storing : "+x);
+	}
+}
+
+class Test
+{
+	main() {
+		Freedge f1 = new Freedge("LG",120);
+		Freedge f2 = new Freedge("Samsung"140);
+		Freedge f3 = new Freedge("Hitachi",160);
+	
+		Food food1 = new Food("Fish);
+		Food food2= new Food("Paneer");
+		Food food3 = new Food("Vegetables");
+
+		f1.store(food1);
+
+	}
+}
+
+
+
+
+
+
+
+
+
+class Milk
+{
+	String type; //cow,buffalow, goat
+	String color; //offwhite, white
+	String density; //thin, thick
+	int quantity; // 3 ltr, 5 ltr etc
+
+	cot/set/get
+
+//producesA		 //usesA
+	Curd coagulate(CurdCulture cc)
+	{
+		sysout("creating curd from the milk...using cc");
+		Curd curd = new Curd(); //local object
+		return 100;
+	}
+
+}
+class CurdCulture
+{
+	int quantity;
+	int bacteria; // good one to make the curd
+	ctor/set/get
+}
+
+
+
+
+
+
+
+
+		Packages are similar to directories
+			|
+			java.lang
+			java.net
+
+		A directory is used to store files
+			|
+			c:\vishal\java\lang		or java\net
+
+		since it is a package [ directory ] we can store
+		relevant classes in a particular package
+
+
+					java <-- main-package [ always small case ]
+					|
+			----------------------------------------------------
+			|			|			|			|
+			lang			net			sql			io <-- sub-packages
+			|			|			|			|
+			System		Socket		Driver		InputStream
+			Thread		InetAddress	ResultSet		OutputStream
+			String		ServerSocket	DriverManager	File
+			Exception
+
+
+			we wont keep all the classes in one folder [ package ]
+
+			we will separate them in relevant folders
+
+
+							jungle <-- main package
+							|
+				-------------------------------
+				|		|		|		|
+				river	cave		tree		compound <-- sub-package
+				|		|		|		|
+				Frog		Tiger	Parrot	FarmHouse <-- classes
+				Fish		Lion		Monkey
+
+
+
+		There are FOUR access specifiers
+
+			1.          <-- default/accessible/friendly
+
+			2. private	<-- accessible within the same class design
+
+			3. protected <-- accessible within the same class/ child class
+							in same package/ non-child class in same package
+
+							But not accessible to non-child in diff package
+
+			4. public <-- available across the internet
+
+						from anywhere accessible
+					
+
+
+				field			method				class
+	-------------------------------------------------------------------------
+	final		CONSTANT			cannot be			cannot be extended
+								overriden			[ cannot become father]
+
+	-------------------------------------------------------------------------
+	static		sharable 			static method
+				field across		is used to refer
+				all the objects	other static
+				of a class		members/data/
+								functions
+	-------------------------------------------------------------------------
+	abstract		NA				partial contract/	a class with/without
+								incomplete method	abstract methods
+								of a class
+	-------------------------------------------------------------------------
+
+
+
+
+	static	 = static only can access other static
+
+	non-static = non-static can access non-static + static
+
+
+		static								non-static
+		[ Class's Data ]					 [ Object's Data ]
+		|									|
+		rateOfInterest							acno,name,bal
+											acno,name,bal
+											acno,name,bal
+
+		BankAccount.rateOfInterest				this.acno
+											this.name
+											this.bal
+
+
+
+
+		abstract 
+
+
+
+
+
+
+
+Four categories of methods as per inheritance rule
+-----------------------------------------------------
+1. Inherited function inside B
+class A
+{
+	void fun() 
+	{
+	}
+}
+class B extends A
+{
+}
+------------------------
+
+2. Inherited-cum-overridden function inside B
+class A
+{
+	void fun() <-- overridden
+	{
+	}
+}
+class B extends A
+{
+	void fun() <-- overriding
+	{
+		<-- new/revised code
+	}
+}
+------------------------
+
+3. Exclusive function inside B
+class A
+{
+	void fun() <-- overridden
+	{
+	}
+}
+class B extends A
+{
+	void fun() <-- overriding
+	{
+		<-- new/revised code
+	}
+	void foo()
+	{
+	}
+}
+------------------------
+4. Implemented [ mandatory ] function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	1. With a paper and Pen draw number 6 in anticlock wise
+	2. With the TOE of your right LEG draw circle on the floor clockwise
+	3. DO above 2 steps concurrently
+
+
+	abstract class GeometricalShape
+	{
+		abstract void draw(); // abstract method MUST reside in an ABSTRACT class
+		abstract void calcArea();
+	}
+	class Square extends GeometricalShape {}
+	class Circle extends GeometricalShape {}
+	class Triangle extends GeometricalShape {}
+	class Ellipse extends Circle {} // not compulsory to implement the methods
+
+
+
+
+
+	//it is very much possible to create an abstract class WITHOUT any abstract
+	//method in it
+	abstract class BankAccount
+	{
+		//as of now there are NO abstract methods
+	}
+
+
+
+In Java = One class cannot extend from multiple parent to avoid ambiguity
+
+Interfaces = accessibility context of a class
+
+
+
+
+		
+
+
+
+Exception Handling
+-------------------
+
+	Exception = runtime error
+
+
+
+						Errors
+						|
+			---------------------------------------------
+			|		|		|		|		|
+			compile	runtime	Linker	fatal	logical
+			time		|		|		  |		|
+			|		|		|		  |		4+4=16 + must be x
+			syntax	Exception missing 	Memory
+							libraries Insufficient
+									Drive Error
+
+
+
+		class FundTransferService
+		{
+			void transfer(BankAccount source, BankAccount target, double amtToTransfer)
+			{
+			//YOU WOULD HAVE A BIG JUNGLE OF IF and ELSE
+			// YOUR BUSINESS LOGIC + ERROR HANDLING LOGIC IS INTERMINGLED [ KHICHADI ]
+				if(target.found()) { // if the target found only then go ahead
+					if(source.found()) {
+							if(amtToTransfer < 0 ) {
+								Sop("Amt cannot be in negative");
+							}
+							else { 
+								if(source.getBal() > amtToTransfer) {
+									source.withdraw(amtToTransfer);
+									target.deposit(amtToTransfer);
+								}	
+								else {
+									Sop("Balance is Not sufficient");
+							}
+					}
+					else {
+						Sop("Source Not found");
+					}
+				}	
+				else {
+					Sop("Target Not found");
+				}		
+		
+			}
+		}
+
+
+		class FundTransferService
+		{
+			void transfer(BankAccount source, BankAccount target, double amtToTransfer)
+			{
+			//YOU WOULD HAVE A TRY and CATCH BLOCK 
+			// YOUR BUSINESS LOGIC in the TRY
+			//+ ERROR HANDLING LOGIC in the CATCHES
+
+				try
+				{
+		1			target.find();
+		2			source.find();
+		3			source.check(amtToTransfer);
+		4			source.withdraw(amtToTransfer);
+		5			target.deposit(amtToTransfer);
+				}		
+				catch(TargetNotFoundException e) {
+					S.err.println("Target Not Found");
+				}
+				catch(SourceNotFoundException e) {
+					S.err.println("Source Not Found");
+				}
+				catch(NegativeAmountException e) {
+					S.err.println("Amount cannot be negative...");
+				}
+				catch(InsufficientFundsException e) {
+					S.err.println("Insufficient funds in the source account");
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
