@@ -575,13 +575,93 @@ Exception Handling
 										FastTagNotRechargedException
 										HeartArrestException
 
+			Lock Example
+				|
+			----------------------
+			|				|
+		automatic lock			manual lock
+			|					|
+		Key must be with u		without key u cannot lock the door with such manual lock
+							hence key must be searched by you before exiting the 
+							home
+
+
+
+			class Person
+			{
+				void study()
+				{
+				}
+				void exitingFromAutoLockDoor()
+				{
+					//even if the key is not found/missing
+					//still the door may be locked 
+				}
+				void exitingFromManualLockDoor()
+				{
+					 //must find the key in order to lock it
+				}
+			}
+
+
+
+1. Assignment
+
+		Split all the exceptions across relevant packages
+
+2. Assignment
+
+		5 checked - for your own example
+		5 unchecked 
+
+3. Club all the examples of the entire class 
+		e.g. Prakash Dure's example = Cricket's example
+
+		e.g. Vedant Dhopate's example = Chandrayan's example
+
+		e.g. Jyoti Sonkamble's example = Cat
+
+	Prakash is solving 
+	---------------------
+	Prakash would gather all the 19 examples of the other students
+	and make a mixture of isA hasA usesA producesA 
+	and make a POWERfull STORY
+
+	5 people group - where Prakash would be team leader
+
+	1 Prakash
+		4 
+
+	2 Jay Bansod
+		4
+
+	3 Mahendra Tekude
+		4
+
+	4 Priyanka Mete
+		4
+
+
+		class Cricketer <-- Prakash's example
+		{
+			Bat bat; //hasA
 			
+				void playing(Cat cat) <-- Jyoti's example
+				{
+					cat.meow();
+				}
+		}
+
+		class Chandrayan <-- Vedant's example
+		{
+				void landing(Cricketer cricketer)
+				{
+					cricketer.bat();
+				}
+		}
 
 
-
-
-
-
+		
 
 
 

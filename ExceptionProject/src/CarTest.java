@@ -1,21 +1,23 @@
 
 public class CarTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) //throws CarKeyNotFoundException
+	{
 		System.out.println("Begin main\n");
 		
 		try {
 			Car car = new Car();
 			
-				car.startTheCar();
+			car.startTheCar();
 			
 			
 			if(car.carKeyFound)
 				car.longDrive();
 			
-		} //UNCHECKED need not be caught in the catch block
+		} //CHECKED MUST BE CAUGHT IN THE CATCH BLOCK
 		catch (CarKeyNotFoundException e) {
 			System.out.println("Issue : "+e);
 		}
+		//UNCHECKED need not be caught in the catch block
 		catch(TyrePuncturedException e) {
 			System.out.println("Now searching for a Tyre puncture repairWALA "+e);
 		}
@@ -87,7 +89,7 @@ class Car
 	}
 	
 	
-	void longDrive()
+	void longDrive() // throws clause is not here
 	{
 		for(int i=1;i<=25;i++) {
 			System.out.println("Kilometers driven..."+i);
