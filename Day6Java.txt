@@ -507,6 +507,15 @@ Exception Handling
 		}
 
 
+		try
+		
+		catch
+
+		throw
+
+		throws
+
+		finally
 
 
 
@@ -521,17 +530,52 @@ Exception Handling
 
 
 
+						Object
+						|
+						Throwable
+						|
+				----------------------		
+				|				|
+				Error			Exception
+								| except RuntimeException
+								| are known as CHECKED exception
+						---------------------------------------
+						|				|		  |
+					RuntimeException		IOException SQLException
+						| + all the children
+						| unchecked exception
+			--------------------------------------------
+			|		|		|				|
+	ArithmeticException	|	NullPointerExcetpion	ClassCastException
+			IndexOutOfBoundsException
+					|
+			------------------------------		
+			|					|
+	ArrayIndexOutOfBoundsException	StringIndexOutOfBoundsException
 
 
 
+		checked = they are verified during the compilation time
+
+		unchecked = they are verified during the run time  [ ignored during compile time]
 
 
+							drive()
+							 |
+					shortDrive()	or longDrive()
 
+				checked					unchecked
+				|						|
+			CarKeyNotFoundException			BrakeFailedException
+			TyrePuncturedExcetpion			RedSignalDishonouredException
+			LowPressureOfTyreException		SpeedLimitExceededException
+			CarNotStartingException			PUCExpiredException		
+			EmptyFuelTankException			SpeedBrakerException
+										AccidentException
+										FastTagNotRechargedException
+										HeartArrestException
 
-
-
-
-
+			
 
 
 
