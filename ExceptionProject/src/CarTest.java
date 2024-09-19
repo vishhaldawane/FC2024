@@ -5,7 +5,16 @@ public class CarTest {
 		
 		try {
 			Car car = new Car();
-			car.longDrive();
+			
+				car.startTheCar();
+			
+			
+			if(car.carKeyFound)
+				car.longDrive();
+			
+		} //UNCHECKED need not be caught in the catch block
+		catch (CarKeyNotFoundException e) {
+			System.out.println("Issue : "+e);
 		}
 		catch(TyrePuncturedException e) {
 			System.out.println("Now searching for a Tyre puncture repairWALA "+e);
@@ -22,18 +31,23 @@ public class CarTest {
 	}
 }
 
+//UNCHECKED
 class TyrePuncturedException extends RuntimeException
 {
 	TyrePuncturedException(String msg) {
 		super(msg);
 	}
 }
+
+//UNCHECKED
 class SpeedLimitExceededException extends RuntimeException
 {
 	SpeedLimitExceededException(String msg) {
 		super(msg);
 	}
 }
+
+//UNCHECKED
 class SpeedBreakerBouncedException extends RuntimeException
 {
 	SpeedBreakerBouncedException(String msg) {
@@ -41,8 +55,38 @@ class SpeedBreakerBouncedException extends RuntimeException
 	}
 }
 
+//CHECKED
+class CarKeyNotFoundException extends Exception
+{
+	CarKeyNotFoundException(String msg)
+	{
+		super(msg);
+	}
+}
+
 class Car
 {
+	boolean carKeyFound=false;
+	
+	//whenever a method is throwing a checked exception
+	//then it must be declared in the throws clause of 
+	//that method
+	void startTheCar() throws CarKeyNotFoundException
+	{
+		double v = Math.random()%10;
+		if(v>0.95) {
+			System.out.println("Key found");
+			carKeyFound=true;
+		}
+		else {
+			//System.out.println("Key NOT found");
+			CarKeyNotFoundException cckNf = new CarKeyNotFoundException("Car key not found");
+			carKeyFound=false;
+			throw cckNf; //rule is to declare in the throws clause
+		}
+	}
+	
+	
 	void longDrive()
 	{
 		for(int i=1;i<=25;i++) {
