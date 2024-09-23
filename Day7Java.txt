@@ -1,0 +1,100 @@
+
+
+
+
+
+
+Multithreading
+------------------
+
+
+		"Why" Threading?
+		What is a Thread?
+		How to write a code?
+		"Who" will write the code?
+		"When" will you write the code?
+	
+
+		Thread = a piece of program / set of instructions / series of lines
+				of code
+
+
+					Bank Cash Deposit Counter
+
+Ac Book Store
+---------------
+acno acname balance
+---------------------
+101	Dinesh 55000 <-- Mark it as a record being used by him/her by keeping 
+				  a book mark there / parchi / token / Teller1 BM
+
+				below 2 are in wait mode until the teller1 notifies them
+				 |
+				<-- teller2 also keeps a bookmark there as a queue
+				<---teller3 also keeps a bookmark there as a queue
+102  Naresh 60000
+103  Mahesh 70000
+104  Rajesh 80000
+105  Yogesh 90000
+...
+
+Series of lines of execution by Teller1 is a single Thread
+
+		Teller1			Teller2			Teller3
+		|50000			| 55000			| 62000
+		getBalance()		getBalance()		getBalance()
+		calcAmt()			calcAmt()			calcAmt()
+		setBalance()		setBalance()		setBalance()
+		| 55000			| 62000			| 70000
+		CustomerA			CustomerB			CustomerC
+		|				|				|
+for a/c	101				101				101
+time		10.30am			10.30am			10.30am
+cash		5000/- Rs			7000/-			8000/-
+deno		100/- 			500/-			2000/-
+count	50 notes			14 notes			4 notes
+		|				|
+	
+		CustomerD
+		CustomerE
+
+
+
+
+		    <Running>					Runnable
+			| run();					| run()
+			|						|
+			| implements				|implements
+			|						|
+			Car						Thread
+			| startTheCar() {}			|start()-> talks with JVM
+			|						|		Thread Scheduler
+		---------------		-------------------
+		| extends 			| extends 
+	SedanCar					MyThread
+		|					| run() { your code here to
+								 participate in multithreading
+							  }
+				
+	4 steps to create multithraded example
+	-----------
+	1. write a class that extends java.lang.Thread class
+	2. override run() method
+	3. create the object of your class of step no.1
+	4. invoke its start() method -> which invokes run() method
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+		

@@ -1,0 +1,62 @@
+
+
+class Heart
+{
+	void beating() {
+	}
+}
+class Human
+{
+	Heart heart = new Heart(); //has
+}
+
+class Person extends Human
+{
+	BankAccount ba = new BankAccount(); //has
+
+	void feel() {
+		heart.beating();
+	}
+
+	Sclupture doingArtWork(Clay cl, Chisel ch) {
+	
+	}
+}
+class Sclupture 
+{
+
+}
+class Clay
+{
+	//type  ctor get set
+}
+class Chisel
+{
+	//type, shape, purpose, set/get
+}
+
+class ScluptureSeller extends Person
+{
+	Sclupture s1;
+	Sclupture s2;
+	Sclupture s3;
+
+	void marketing() {
+		s1.showFeatures();
+	}
+
+	Money sell() {
+		s1.getPrice();	
+	}
+}
+class MovieTheature
+{
+		MovieTicket buyTicket(Money m)
+		{
+
+		}
+}
+
+
+
+

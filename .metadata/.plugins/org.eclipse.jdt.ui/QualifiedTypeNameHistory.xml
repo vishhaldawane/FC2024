@@ -9,4 +9,9 @@
     <fullyQualifiedTypeName name="jungle.river.Tortoise"/>
     <fullyQualifiedTypeName name="jungle.tree.Monkey"/>
     <fullyQualifiedTypeName name="GeometricalShape"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="TyrePuncturedException"/>
+    <fullyQualifiedTypeName name="SpeedLimitExceededException"/>
+    <fullyQualifiedTypeName name="SpeedBreakerBouncedException"/>
+    <fullyQualifiedTypeName name="CarKeyNotFoundException"/>
 </qualifiedTypeNameHistroy>
