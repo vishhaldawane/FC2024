@@ -111,11 +111,58 @@ II.
 
 			-> which invokes the run() method of object of step no 1
 				run() { } of Male 
+
+
+
+
+	innovate a simple synchronized method same like
+	Account + 3 Tellers example
+
+
+
+
+
+
+
+
+
+
+
+
+
 			
 
 
 
 
+
+		FoodItem
+			- name
+			- isServed ? boolean
+			- serve() <- invoked by Server
+			- eat() <-- invoked by Eater
+			
+			Thread
+			|
+	-------------------------
+	|				|
+	Eater			Server
+
+	- both the threads will work on the common object, ie FoodItem's object
+
+		Eater will invoke eat()
+		Server will invoke serve()
+
+		both the threads starts....
+
+		if eat()  invoked first, then it should wait
+		so that serv() should be invoked to serve()
+
+		if serve()  invoked first, then it should serve,
+		so that eat() is following it
+	use wait and notify in the eat() and serve() method of the foodItem
+
+		They are the methods of the java.lang.Object class
 
 
 
