@@ -61,21 +61,25 @@ count	50 notes			14 notes			4 notes
 
 
 
-		    <Running>					Runnable
-			| run();					| run()
-			|						|
-			| implements				|implements
-			|						|
-			Car						Thread
-			| startTheCar() {}			|start()-> talks with JVM
-			|						|		Thread Scheduler
-		---------------		-------------------
-		| extends 			| extends 
-	SedanCar					MyThread
-		|					| run() { your code here to
-								 participate in multithreading
-							  }
+		    <Running>							Runnable
+			| run();							| run()
+			|	 		  		Mammal		|
+			|	                     |(c)		|
+			|			           |giveBirth	|
+			| implements	       ------------------|implements
+			|				  |				|
+			Car				 Human(c)			Thread
+			| startTheCar() {}	 |think()			|start()-> talks with JVM
+			|				 |			     |	Thread Scheduler
+			|				 |				| Thread(Runnable r)
+		---------------		 |		-------------------
+		| extends 		----------		| extends 
+	SedanCar				|	    |	MyThread
+		|			   Male	Female	| run() { your code here to
+								 		participate in multithreading
+							  		}
 				
+I.
 	4 steps to create multithraded example
 	-----------
 	1. write a class that extends java.lang.Thread class
@@ -83,6 +87,31 @@ count	50 notes			14 notes			4 notes
 	3. create the object of your class of step no.1
 	4. invoke its start() method -> which invokes run() method
 
+II.
+	1. write a class that implements java.lang.Runnable interface
+
+			class Male extends Human implements Runnable { }
+
+	2. implement run() method [ mandatory ]
+			run() {
+				protect();
+			}
+
+	3. create an object of your class of step no. 1
+			Male male1 = new Male();
+
+	4. create an object of java.lang.Thread class and to its
+		consturctor pass your object of step no. 1
+
+			Thread t1 = new Thread(male1);
+
+	5. invoke start() method of object created on step no.4
+		 
+			t1.start();
+
+			-> which invokes the run() method of object of step no 1
+				run() { } of Male 
+			
 
 
 
