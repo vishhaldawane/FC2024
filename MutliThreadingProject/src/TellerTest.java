@@ -12,12 +12,19 @@ public class TellerTest {
 		Transaction teller3 = new Transaction("\t\tReeta",bankAccObj,8000); //used by thread3
 		
 
-		teller1.start(); // run() --> deposit();
-		teller2.start();// run() --> deposit();
-		teller3.start();// run() --> deposit();
+		System.out.println("SEETA CREATING IDLI...");
+		teller1.start(); // run() --> deposit(); // idli
+		
+		System.out.println("GEETA CREATING SAMBAR...");
+
+		teller2.start();// run() --> deposit();  // sambar
+		
+		System.out.println("REETA CREATING CHUTNEY...");
+
+		teller3.start();// run() --> deposit();  // chutney
 
 		try {
-			teller1.join();
+			teller1.join(); //WAIT FOR THIS THREAD TO DIE
 			teller2.join();
 			teller3.join();
 			System.out.println("\n\nWAITING FOR ALL THE 3 THREADS TO GET OVER...ONLY THEN BELOW LINE WOULD RUN...");
@@ -28,7 +35,7 @@ public class TellerTest {
 		}
 
 		
-		System.out.println("FINAL : bankObj : "+bankAccObj);
+		System.out.println("SERVING IDLI+SAMBAR+CHUTNEY FINAL : bankObj : "+bankAccObj); // i want to serve the idli+sambar+chutney
 
 		System.out.println("\nEND main\n");
 		
