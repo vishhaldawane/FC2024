@@ -80,15 +80,46 @@ public class ArrayTest {
 			}
 		}
 		
+		System.out.println("Showing 11th book");
+		try {
+			bunch[11].showBook(); //data is upto only 10 books  -- ARRAY CANNOT GROW AT RUNTIME
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("Book at 11th index does not exists!!!!");
+		}
 		
-
+		bunch[1] = new TextBook(106,"Maths I","Aryabhatta",3400,5300.0f,1);
+		bunch[1].showBook();
+		
+		//bunch[2]= new Kitchen(); //CANNOT assign data other than Book and its Children
 	}
+}
+class Kitchen
+{
+	
+}
+class TextBook extends Book {
+
+	public TextBook(int bookId, String bookName, String bookAuthor, int numberOfPages, float bookPrice, int edition) {
+		super(bookId, bookName, bookAuthor, numberOfPages, bookPrice, edition);
+		// TODO Auto-generated constructor stub
+	}
+	
 }
 /*
 				Stack
 				
-										------------------------------------------
-				+------------------------|0  |0	 |0	 |0	 |0	 |0	 |0	 |0	 |0	|0	|
+										----------------------------------------------------------------
+										|101,"Java Programming Language","James Gosling",1200,2000.0f,3 |
+										----------------------------------------------------------------
+										200
+										 |		   ----------------------------------------------------------------
+										 |		   |102,"C++ Programming Language","Bjarne Stroustup",800,1800.0f,1 |
+										 |		   ----------------------------------------------------------------
+										 | 	       300
+										 |			 |
+										 ------------------------------------------
+				+------------------------|200 |0   | 300 |0	 |0	 |0	 |0	 |0	 |0	|0	|
 				|						 ----------------------------------------
 				|					    100
 				|						  0   1   2   3   4   5   6   7   8   9

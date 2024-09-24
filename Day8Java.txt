@@ -74,7 +74,20 @@ CupSaucer
 
 
   Array
-  ArrayList
+		- group of variables
+		- *of similar type
+		- stored in consecutive memory location
+		- referred by a common name
+		- *cannot grow or shrink at runtime
+
+
+java.util package
+:
+  ArrayList <-- container same like array
+
+		- but it can store data of different types
+		- it CAN grow or shrink at runtime
+
 
 
 
