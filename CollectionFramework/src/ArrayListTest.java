@@ -14,7 +14,11 @@ public class ArrayListTest {
 		
 		//CONTAINER
 		ArrayList<Book> bunch = new ArrayList<>(); //no size - 10 is the size
-			
+	//  LinkedList
+	//  HashSet
+	//  TreeSet
+		
+		
 		//keep on appending the book - DATA TYPE
 		bunch.add(new Book(101,"Java Programming Language","James Gosling",1200,2000.0f,3));
 		bunch.add(new Book(102,"C++ Programming Language","Bjarne Stroustup",800,1800.0f,1));
