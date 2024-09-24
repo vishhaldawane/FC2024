@@ -91,15 +91,151 @@ java.util package
 
 
 
+						Iterable <i>
+						|
+					  Collection <i>
+						|
+				--------------------------
+				|					|
+				List	<i>				Set <i>
+				|duplicates			|unique
+		----------------			-----------
+		|			|			| 		|
+		ArrayList	LinkedList		TreeSet	HashSet <-- classes
+				|
+				Book
+
+Array list is like elevator
+------------------------------
+Efficient - fast to iterate
+		  fast to append at the end 
+			
+drawback - can insert item between existing elements
+		 but that is not flexible and inefficient
+
+	------
+ 0	|bk1	|
+	------
+ 1	|bk2	|
+	------
+ 2	|bk3	|
+	------
+ 3	|bk4	|
+	------
+ 4	|bk5	|
+	------
+ 5	|bk6	|
+	------
+ 6	|..	|
+	------
+	   |
+	grows at
+	the end
+Hence suitable for storing log reports
+	
+
+Linked List structure below
+
+	Flexibility is great
+
+	Efficiency is poor = Iteration - is slowest
+
+if efficient search is NOT the requirement - then linked list is best
+and if frequent addition, updation, deletion [ CUD ] operation
+is required, then linked list is the best
+
+BUT if only EFFIcIENT SEARCH and APPEND required - ArrayList
+
+	node1	node2	node3	node4	node5	node6
+	+----+    +----+    +----+    +----+    +----+    +----+
+next	|200	|--->|500	|--->|800 |--->|700	|--->|300	|--->|0	|
+	+----+    +----+    +----+    +----+    +----+    +----+
+DATA	|bk1 |	|bk2	|	|bk3	|	|bk4	|	|bk5	|	|bk6	|
+	+----+    +----+    +----+    +----+    +----+    +----+
+prev	|0	|<---|100	|<---|200 |<---|500	|<---|800	|<---|700	|
+	+----+    +----+    +----+    +----+    +----+    +----+
+	100		 200		500		800		700		300
+
+
+HashSet
+
+
+	telephone diary
+
+	ABC
+		amit
+		bharat
+		chirag
+		ajay
+		bharati
+
+	DEF
+		dinkar
+		eshwar
+		dinesh
+		esha
+
+	GHI
+		
+	JKL
+
+	MNO
 
 
 
 
+			--------------------------
+			|		|			|
+			|Science	| Novel		|
+			+---------+--------------+
+			|  Spiritual	|Religious|
+			|			|		|
+			--------------------------
+			|		| 			|
+			|		| engi		|
+			|------------------------|
+			|fiction		| comics	|
+			+------------------------+
+
+		In order and out order are different
+
+TreeSet
+
+
+	50	10	60	20	30	80
+
+			<---		Root
+					|50
+				----------------
+				|			|
+				Left			Right
+				|10			|60
+			----------	-----------
+			|	    |20	|55		|80
+			L		R	L		R (RRR)
+		    (RLL)	    (RLR)	(RRL)
+					|
+				----------
+						|
+						30
+						RLRR
+
+
+		10  20 30    50     55	60  80
+		<--left---> root	<---right--->
 
 
 
+	
+
+The MAGIC of Thinking BIG
+		- David Schwartz
+
+	5 years would be saved
 
 
+
+	
 
 
 

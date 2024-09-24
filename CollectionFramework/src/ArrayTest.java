@@ -3,7 +3,11 @@
 
 //100 - 80%
 
-class Book
+
+//amit		ajit
+
+
+class Book implements Comparable<Book> // Comparable interface is used to compare books
 {
 	private int bookId;
 	private String bookName;
@@ -11,6 +15,21 @@ class Book
 	private int numberOfPages;
 	private float bookPrice;
 	private int edition;
+	
+	/*@Override
+	public int compareTo(Book o) { //mandatory to implement cause of Comparable interface
+
+		System.out.println("Comparing "+bookId+ " with "+o.bookId);
+		return Integer.compare(bookId,o.bookId); //o is the Book's object that is passed as an argument
+	}*/
+	
+	
+	@Override
+	public int compareTo(Book o) { //mandatory to implement cause of Comparable interface
+
+		System.out.println("Comparing "+edition+ " with "+o.edition);
+		return Integer.compare(edition,o.edition); //o is the Book's object that is passed as an argument
+	}
 	
 	public Book(int bookId, String bookName, String bookAuthor, int numberOfPages, float bookPrice, int edition) {
 		super();
@@ -37,6 +56,7 @@ class Book
 		System.out.println("Book Edition : "+edition);
 		System.out.println("----------------------------------------");
 	}
+
 	
 	
 }
