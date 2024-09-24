@@ -14,4 +14,11 @@
     <fullyQualifiedTypeName name="SpeedLimitExceededException"/>
     <fullyQualifiedTypeName name="SpeedBreakerBouncedException"/>
     <fullyQualifiedTypeName name="CarKeyNotFoundException"/>
+    <fullyQualifiedTypeName name="StageBuilder"/>
+    <fullyQualifiedTypeName name="CurtainDecorator"/>
+    <fullyQualifiedTypeName name="FlowerDecorator"/>
+    <fullyQualifiedTypeName name="LightingDecorator"/>
+    <fullyQualifiedTypeName name="BankAccount"/>
+    <fullyQualifiedTypeName name="java.beans.IntrospectionException"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 </qualifiedTypeNameHistroy>

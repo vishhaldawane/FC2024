@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+
+		Collection Framework
+
+	
+	Component's Orthogonal Space
+
+
+  who will decide that which data will go in which type of container?
+
+		YOU
+
+	-- all are interdependent upon each other --
+
+
+			Flexibility		vs		Efficiency
+			|						|
+			Create Read				Speed/Time
+			Update Delete
+
+						X - Data Type
+						|       | MAIN THING
+						|	ButterMilk <--liquid type
+						|	FriedRice
+						|	Noodles
+						|    PaneerChilly
+						|	Pickle
+		Y ------------------+-----------------Z
+		|STORE			|			   |
+	Container				|			Algorithm
+	|					|				| USAGE		
+	Glass				|	I			drink()
+	Plate			   Iterator			eat()
+	Bowl					| GO THRU			gulpAndEat()			
+	Jar				   Straw				pokeAndEat()
+					   Spoon				lick()
+					   ChopSticks
+					   Fork
+					   PickleSpoon
+
+	Container developer is responsible
+	to provide its own iterator
+
+
+CupSaucer
+
+
+
+		Glass <-- ButterMilk <-- Straw <-- drink()
+		Glass <-- ButterMilk <-- ChopSticks -- invalid iterator
+ 
+		Plate <-- ButterMilk <-- Straw -- invalid container
+
+
+
+				Ferrari <---> Racing Track
+							
+				HorseCart <--> sea shore, road
+
+				
+
+
+
+
+
+					
+		
+
+
+  Array
+  ArrayList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
