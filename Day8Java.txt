@@ -102,8 +102,51 @@ java.util package
 		----------------			-----------
 		|			|			| 		|
 		ArrayList	LinkedList		TreeSet	HashSet <-- classes
-				|
-				Book
+		|			|			|			|
+		PhoneLog	 PhoneContact	ChemicalElement   Vegetable
+
+
+1)
+COTENT
+
+PhoneLog log1 = new PhoneLog("Missed","Prakash",9823445667);
+PhoneLog log1 = new PhoneLog("Missed","Janmesh",3823445667);
+PhoneLog log1 = new PhoneLog("Dialed","Prakash",6823445667);
+PhoneLog log1 = new PhoneLog("Missed","Sarika",7823445667);
+PhoneLog log1 = new PhoneLog("Recieved","Prakash",8823445667);
+PhoneLog log1 = new PhoneLog("Missed","Jaya",7623445667);
+Container
+	ArrayList
+
+2) 
+	PhoneContact contact1 = new PhoneContact("Shweta","shwe@gmail.com",9123123);
+	PhoneContact contact1 = new PhoneContact("Shweta","shwe@gmail.com",9123123);
+	PhoneContact contact1 = new PhoneContact("Shweta","shwe@gmail.com",9123123);
+	PhoneContact contact1 = new PhoneContact("Shweta","shwe@gmail.com",9123123);
+	PhoneContact contact1 = new PhoneContact("Shweta","shwe@gmail.com",9123123);
+	
+	Container->LinkedList 
+
+3) 
+	ChemicalElement	element1 = new ChemicalElement("Hydrogen","H",1.0078);
+	ChemicalElement	element2 = new ChemicalElement("Gold","H",1.0078);
+	ChemicalElement	element3 = new ChemicalElement("Silver","H",1.0078);
+
+		Container --> TreeSet
+
+4) 
+		Vegetable veg1 = new Vegetable("CauliFlower",250,"OffWhite",120);
+		Vegetable veg2 = new Vegetable("Brinjal",250,"OffWhite",120);
+		Vegetable veg3 = new Vegetable("Cucumber",250,"OffWhite",120);
+		Vegetable veg4 = new Vegetable("LadiesFinger",250,"OffWhite",120);
+
+		Container --> HashSet
+
+
+
+
+
+
 
 Array list is like elevator
 ------------------------------
